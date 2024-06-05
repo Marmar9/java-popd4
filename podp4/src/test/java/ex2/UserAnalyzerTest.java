@@ -20,8 +20,7 @@ public class UserAnalyzerTest {
                 new User("Emma", "Brown", 28, "UK"),
                 new User("Emma", "Doe", 28, "UK"),
                 new User("Michael", "Lee", 40, "Canada"),
-                new User("Emma", "Wang", 22, "China")
-        );
+                new User("Emma", "Wang", 22, "China"));
         userAnalyzer = new UserAnalyzer(users);
     }
 

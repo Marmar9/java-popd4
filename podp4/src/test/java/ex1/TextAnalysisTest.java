@@ -43,6 +43,7 @@ public class TextAnalysisTest {
         String text = "To jest tekst tekst tekst.";
         String expected = "tekst";
         String actual = TextAnalysis.getMostFrequentWord(text);
+        System.out.println(actual);
         assertEquals(expected, actual);
     }
 

@@ -59,4 +59,3 @@ public class ProductRepositoryTest {
         assertEquals("Keyboard", foundProducts.get(0).getName());
     }
 }
-

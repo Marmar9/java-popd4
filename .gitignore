@@ -1,0 +1,11 @@
+# Root
+.gradle
+.settings
+.project
+
+# popd4
+popd4/.classpath
+popd4/.project
+popd4/.settings
+popd4/build
+popd4/.factorypath
