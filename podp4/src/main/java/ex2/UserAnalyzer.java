@@ -21,13 +21,12 @@ public class UserAnalyzer {
         Map<String, Long> countryCounts = users.stream()
                 .collect(Collectors.groupingBy(User::getCountry, Collectors.counting()));
 
-        List<Map.Entry<String, Long>> sortedEntries = countryCounts.entrySet().stream()
-                .sorted(Map.Entry.<String, Long>comparingByValue().reversed())
-                .collect(Collectors.toList());
-
-        return sortedEntries.stream()
-                .limit(2)
-                .map(Map.Entry::getKey)
+    return countryCounts.entrySet().stream()
+                .max(Map.Entry.comparingByValue())
+                .stream()
+                .flatMap(maxEntry -> countryCounts.entrySet().stream()
+                        .filter(entry -> entry.getValue().equals(maxEntry.getValue()))
+                        .map(Map.Entry::getKey))
                 .collect(Collectors.toList());
     }
 
